@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculator </title>
+    <script src="./script.js"></script>
     <style>
         * {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -16,6 +17,22 @@
             padding: 25px;
             margin-top: 50px;
         }
+
+        input {
+            padding: 10px;
+            font-size: 25px;
+        }
+
+        button {
+            padding: 20px;
+            background-color: black;
+            color: white;
+            font-size: 25px;
+        }
+        h1{
+            font-size: 40px;
+            color: blueviolet;
+        }
     </style>
 </head>
 
@@ -23,10 +40,25 @@
     <!-- add two number -->
     <div class="box">
         <h1>Add Two Number</h1>
-
+        <input type="text" name="" placeholder="Enter 1st number" id="addNum1">
+        <input type="text" name="" placeholder="Enter 2st number" id="addNum2">
+        <button onclick="addnum()">
+            Add Number
+        </button>
+        <h1 id="add_result">Result = </h1>
 
     </div>
+    <!-- multiplau 2 number -->
+<div class="box">
+    <h1>Multiply Two Number</h1>
+    <input type="text" name="" placeholder="Enter 1st number" id="multiplyNum1">
+    <input type="text" name="" placeholder="Enter 2st number" id="multiplyNum2">
+    <button onclick="multiplynum()">
+        Multiply Number
+    </button>
+    <h1 id="multiply_result">Result = </h1>
 
+</div>
 
 </body>
 
