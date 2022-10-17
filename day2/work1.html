@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get current date nd year</title>
+
+    <style>
+        button {
+            background-color: red;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            letter-spacing: 2px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <button onclick="xyz()">CHECK DATE AND YEAR</button>
+
+    <!-- yahan pr date dikahna hai  -->
+    <h1 id="currentdate"></h1>
+
+    <!-- year dikhana hai  -->
+    <h1 id="currentyear"></h1>
+
+    <script>
+
+        function xyz() {
+            var longdate = new Date();
+
+            // yahan pr current date ko nikal rhe hai.
+            var mydate = longdate.getDate()
+
+
+            // yahan pr current year ko nikal rhe hai 
+            var myyear = longdate.getFullYear();
+
+            // yahan pr my daye to prinkkr rhe hai 
+            console.log(mydate);
+            //  yahan pr full year ko print kr rhe hai.
+            console.log(myyear);
+
+            document.getElementById('currentdate').innerHTML = mydate + myyear;
+         
+
+
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

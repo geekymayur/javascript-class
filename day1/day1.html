@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 25px;
+        }
+
+        button {
+            padding: 25px;
+            font-size: 30px;
+        }
+
+        input {
+            padding: 25px;
+            font-size: 25px;
+        }
+
+        #para1 {
+            color: red;
+            font-size: 30px;
+        }
+
+        #para2 {
+            color: rgb(47, 13, 86);
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  -->
+
+    <input type="text" placeholder="Enter your Name." id="name">
+    <button onclick="submit()">check current month </button>
+<h1 id="showdate"></h1>
+    <script>
+         
+        function submit() {
+            let formname = document.getElementById('name').value ;
+            // alert(formname);
+                let currentDate = new Date();
+                let currentYear = currentDate.getMonth();
+
+                document.getElementById('showdate').innerHTML = currentYear;
+        }
+
+
+//{} = 1. block of code  , 2. object 
+//()=> function
+//[] => datatype array [1,2,3,2,454,545,,"56565"]
+
+
+
+
+    </script>
+
+</body>
+
+</html>
