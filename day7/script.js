@@ -5,7 +5,8 @@ var orders = [
         color: "black",
         price: 30000,
         orderDate: "10/05/2022",
-        status: "delivered"
+        status: "delivered",
+        descriptions:""
     },
     {
         productName: "boat headphone 255pro+",
@@ -103,6 +104,31 @@ function getproduct() {
     document.getElementById('pimg').src = lastOrder.image;
 }
 
+
+function getoneProd(indexnum) {
+    // check last oder
+    var lastOrder = orders[indexnum];
+    document.getElementById('pname').innerHTML = lastOrder.productName;
+    document.getElementById('pcolor').innerHTML = "Color : " + lastOrder.color;
+    document.getElementById('pprice').innerHTML = "Price : " + " Rs." + lastOrder.price;
+    document.getElementById('pstatus').innerHTML = "Status : " + lastOrder.status;
+    document.getElementById('pimg').src = lastOrder.image;
+}
+
+
+function seeallorders() {
+    var allorders = orders;
+    var showOrd = document.getElementById('allorders');
+    var list="";
+    for (var i = 0; i < orders.length; i++){
+        list += ` <button onclick="getoneProd(${i})">  <img src="${orders[i].image}" height="50px"> <br>  ${orders[i].productName} </button> `;
+        console.log(orders[i].productName);
+    };
+   
+
+    showOrd.innerHTML = list;
+
+};
 
 
 

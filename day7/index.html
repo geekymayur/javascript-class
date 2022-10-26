@@ -19,6 +19,9 @@
     <h1>My Orders</h1>
     <input type="text" placeholder="Index Num" id="indexnum">
     <button onclick="getproduct()">Check Order</button>
+    <br> <br>
+    <button onclick="seeallorders()">see all orders</button>
+    <p id="allorders"></p>
     <hr>
     <button onclick="checkLastOrder()">My Last Order</button>
 
@@ -43,6 +46,9 @@
 
         .details img {
             height: 150px;
+        }
+        button{
+            text-align: center;
         }
     </style>
 </body>
